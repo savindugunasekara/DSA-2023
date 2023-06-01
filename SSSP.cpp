@@ -1,6 +1,8 @@
 #include <limits.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include <iostream>
+using namespace std;
 
 #define V 6 // number of vertices
 
@@ -20,9 +22,10 @@ int minDistance(int distance[], bool SPTset[])
 
 void printSolution(int distance[], int n)
 {
-    printf("Vertex   Distance from Source(Time taken)\n");
+    cout<<"Vertex   Distance from Source(Time taken"<<endl;
+    
     for (int i = 0; i < V; i++)
-        printf("%d -------> %d\n", i, distance[i]);
+        cout<<i<<" -------> "<< distance[i]<<endl;
 }
 // implement Dijkstra's algorithm for the graph
 void dijkstra(int graph[V][V], int source)
@@ -55,8 +58,8 @@ int main()
                        {0, 30, 12, 0, 0, 20},
                        {15, 0, 5, 0, 0, 0},
                        {5, 0, 0, 20, 0, 0}};
-    int source_node = 5;
-    printf("Source is %d\n", source_node);
+    int source_node = 0;
+    cout<<"Source is "<< source_node<<endl;
     dijkstra(graph, source_node);
 
     return 0;
